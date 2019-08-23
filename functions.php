@@ -22,6 +22,9 @@ global $maxx, $maxy;
 			case "Update":
 				UpdateTableSize((int)$_GET["GridX"],(int)$_GET["GridY"]);
 				break;
+			case "Report":
+				DoReport();	
+				break;
 				}
 
 		if ($_SESSION["inputtype"] == "Form") //if using the form input
