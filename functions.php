@@ -159,7 +159,7 @@ function DoGraphics() //display a table with the robot at coordinate
 	for ($x = ($maxx); $x >= 0; $x--)
 	{
 		echo '<tr>';
-		for ($y = 0; $y <= ($maxx); $y++)
+		for ($y = 0; $y <= ($maxy); $y++)
 		{
 			echo '<td>';
 			echo $y . '.';
@@ -266,14 +266,14 @@ function IsValidCoordinate($inputcoordinate, $isY) //check the input coordinate 
 	
 	if ($isY == true)
 	{
-		if ($inputcoordinate >= $miny && $inputcoordinate <= $maxy)
+		if ($inputcoordinate >= $miny && $inputcoordinate <= (int)$_GET["GridY"])
 		{
 			return true;
 		} else {return false;}
 	}
 	else
 	{
-	if ($inputcoordinate >= $minx && $inputcoordinate <= $maxx)
+	if ($inputcoordinate >= $minx && $inputcoordinate <= (int)$_GET["GridX"])
 	{
 		return true;
 	} else {return false;}
